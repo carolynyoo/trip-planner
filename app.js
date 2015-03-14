@@ -37,6 +37,11 @@ app.use(sassMiddleware({
 	    prefix:  '/prefix'
 }));
 
+app.use(function (req, res, next) {
+  console.log('made it this far', req.path);
+  next();
+})
+
 app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
 // app.use(express.static(path.join(__dirname, 'bower_components/jquery/dist')));
 app.use(express.static(path.join(__dirname, 'public')));

@@ -36,6 +36,10 @@ body {
 	padding-bottom: 25px;
 	background-color: #d3d3d3;
 	border-radius: 25px;
+  select {
+    width: 85%;
+    display: inline-block;
+  }
 }
 
 #sidebar-choice {
