@@ -10,11 +10,26 @@ a.navbar-brand {
 	}
 }
 
+select {
+  // only works in webkit-compatible browsers
+  -webkit-appearance: menulist-button;
+}
+
 body {
-  padding-top: 50px;
+  padding-top: 60px;
   font-family: 'Lato';
   font-weight: 300;
   background-color: #f9f9f9;
+}
+
+.row {
+  margin: 0;
+}
+
+#map-canvas {
+  box-sizing: border-box;
+  height: 650px;
+  margin-bottom: 15px;
 }
 
 #sidebar-options, #sidebar-choice {
@@ -29,9 +44,23 @@ body {
 
 #sidebar-dayslide {
 	background-color: #888;
-
+  padding: 5px;
+  ul {
+    -webkit-padding-start: 0px;
+  }
 	li {
 		float: left;
 		list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+    margin-right: 5px;
+    border-radius: 100%;
+    border: 1px solid #ccc; 
+    color: #fff;
+    font-size: 20px;
 	}
+  li:hover {
+    background-color: #ccc;
+    color: #fff;
+  }
 }

@@ -1,39 +1,38 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  
-  <!-- Hello tripplanner -->
-  <div class="row">
-	  <div class="col-lg-8 col-md-12 col-sm-12">
-		  MAP
-	  </div>
-	  <div class="col-lg-4 col-md-12 col-sm-12">
+
+<!-- Hello tripplanner -->
+<div class="row">
+<div class="col-lg-8 col-md-6 col-sm-12" id="map-canvas">
+	</div>
+	<div class="col-lg-4 col-md-6 col-sm-12" id="sidebar">
 		<div class="row" id="sidebar-options">
-			  <div class="col-lg-12 col-md-12 col-sm-12">
-			  <h2>Hotels</h2>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<h2>Hotels</h2>
 				<select>
-				{% for hotel in hotels %}
-				<option>{{hotel.name}}</option>
-				{% endfor %}
+					{% for hotel in hotels %}
+					<option>{{hotel.name}}</option>
+					{% endfor %}
 				</select>
-			  </div>
-			  <div class="col-lg-12 col-md-12 col-sm-12">
-			  <h2>Restaurants</h2>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<h2>Restaurants</h2>
 				<select>
-				{% for onerest in rest %}
-				<option>{{onerest.name}}</option>
-				{% endfor %}
+					{% for onerest in rest %}
+					<option>{{onerest.name}}</option>
+					{% endfor %}
 				</select>
-			  </div>
-			  <div class="col-lg-12 col-md-12 col-sm-12">
-			  <h2>Things To Do</h2>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<h2>Things To Do</h2>
 				<select>
-				{% for thing in things %}
-				<option>{{thing.name}}</option>
-				{% endfor %}
+					{% for thing in things %}
+					<option>{{thing.name}}</option>
+					{% endfor %}
 				</select>
-			  </div>
-		  </div>
+			</div>
+		</div>
 
 		<div class="row" id="sidebar-choice">
 			<div class="col-lg-12 col-md-12 col-sm-12" id="sidebar-dayslide">
@@ -59,8 +58,8 @@
 				<ul><li>Brooklyn Bridge Park</li></ul>
 			</div>
 
-	 	</div>
-  </div>
+		</div>
+	</div>
 
-  
-{% endblock %}
+
+	{% endblock %}
