@@ -5,6 +5,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var sassMiddleware = require('node-sass-middleware');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -25,10 +26,18 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', dbg, routes);
-app.use('/users', users);
+
+app.use(sassMiddleware({
+	    src: path.join(__dirname, 'assets'),
+	    dest: path.join(__dirname, 'public'),
+	    debug: true,
+	    outputStyle: 'compressed',
+	    prefix:  '/prefix'
+}));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -63,7 +72,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-console.log('Woof');
 
 module.exports = app;
