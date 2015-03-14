@@ -14,20 +14,20 @@ var placeSchema = new Schema({
 
 var hotelSchema = new Schema({
 	name: String,
-	place: {type: Schema.Types.ObjectId, ref: 'pCollections'},
+	place: [{type: Schema.Types.ObjectId, ref: 'pCollections'}],
 	num_stars: {type:Number, min:1, max:5},
 	amenities: String
 });
 
 var ttdSchema = new Schema({
 	name: String,
-	place: {type: Schema.Types.ObjectId, ref: 'pCollections'},
+	place: [{type: Schema.Types.ObjectId, ref: 'pCollections'}],
 	age_range: String
 });
 
 var restSchema = new Schema({
 	name: String,
-	place: {type: Schema.Types.ObjectId, ref: 'pCollections'},
+	place: [{type: Schema.Types.ObjectId, ref: 'pCollections'}],
 	cuisine: String,
 	price: {type: Number, min:1, max: 5}
 });
