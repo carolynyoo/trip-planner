@@ -37,6 +37,8 @@ app.use(sassMiddleware({
 	    prefix:  '/prefix'
 }));
 
+app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
+// app.use(express.static(path.join(__dirname, 'bower_components/jquery/dist')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
