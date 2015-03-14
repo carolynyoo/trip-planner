@@ -3,39 +3,64 @@
 {% block content %}
   
   <!-- Hello tripplanner -->
-
-  <div class="page-header">
-    <h1>{{title}}</h1>
-  </div>
   <div class="row">
-<!--     <div class="col-md-3">
-      <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
-      <b>Nimit Maru</b><br>
-    </div> -->
-      <div class="col-lg-4 col-md-6 col-sm-12">
-      <h2>Hotels</h2>
-        <select>
-        {% for hotel in hotels %}
-        <option>{{hotel.name}}</option>
-        {% endfor %}
-        </select>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-      <h2>Restaurants</h2>
-        <select>
-        {% for onerest in rest %}
-        <option>{{onerest.name}}</option>
-        {% endfor %}
-        </select>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-      <h2>Things To Do</h2>
-        <select>
-        {% for thing in things %}
-        <option>{{thing.name}}</option>
-        {% endfor %}
-        </select>
-      </div>
+	  <div class="col-lg-8 col-md-12 col-sm-12">
+		  MAP
+	  </div>
+	  <div class="col-lg-4 col-md-12 col-sm-12">
+		<div class="row" id="sidebar-options">
+			  <div class="col-lg-12 col-md-12 col-sm-12">
+			  <h2>Hotels</h2>
+				<select>
+				{% for hotel in hotels %}
+				<option>{{hotel.name}}</option>
+				{% endfor %}
+				</select>
+			  </div>
+			  <div class="col-lg-12 col-md-12 col-sm-12">
+			  <h2>Restaurants</h2>
+				<select>
+				{% for onerest in rest %}
+				<option>{{onerest.name}}</option>
+				{% endfor %}
+				</select>
+			  </div>
+			  <div class="col-lg-12 col-md-12 col-sm-12">
+			  <h2>Things To Do</h2>
+				<select>
+				{% for thing in things %}
+				<option>{{thing.name}}</option>
+				{% endfor %}
+				</select>
+			  </div>
+		  </div>
+
+		<div class="row" id="sidebar-choice">
+			<div class="col-lg-12 col-md-12 col-sm-12" id="sidebar-dayslide">
+				<ul> 
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>	
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<h2>My Hotel</h2>
+				<ul><li>Parc</li></ul>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<h2>My Restaurant</h2>
+				<ul><li>Tamarind</li></ul>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<h2>My Things to do</h2>
+				<ul><li>Brooklyn Bridge Park</li></ul>
+			</div>
+
+	 	</div>
   </div>
 
+  
 {% endblock %}
