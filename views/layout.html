@@ -13,7 +13,7 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
  
     <!-- Custom styles for this template -->
-    <link href="/stylesheets/style.css" rel="stylesheet">
+	<link href="/stylesheets/style.css" rel="stylesheet">
  
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -80,23 +80,5 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script>
-    // Load the socket.io library above, then connect to the server.
-    // Because the socket.io server is being run on the same server as your 
-    // Express instance, you can connect() without any arguments.
-    var socket = io.connect();
-
-    // When 'new_tweet' events are fired, do something with the packaged tweet
-    socket.on('new_tweet', function (tweet) { 
-      // alert('Refreshing... check the console...');
-      
-
-      $('.tweet:first').before(html);
-      $('#name_field').val('');
-      $('#text_field').val('');
-
-    });
-  </script>
-  </body>
+    </body>
 </html> 
